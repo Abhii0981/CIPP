@@ -2,30 +2,11 @@
   "routes": [
     {
       "route": "/",
-      "allowedUsers": [ "sohail_admin@nerdtech.net" ]
-    },
-    {
-      "route": "/admin",
-      "allowedRoles": [ "admin" ]
+      "allowedRoles": ["authenticated"]
     },
     {
       "route": "*",
-      "allowedRoles": [ "authenticated" ]
+      "allowedRoles": ["authenticated"]
     }
-  ],
-  "navigationFallback": {
-    "rewrite": "index.html"
-  },
-  "responseOverrides": {
-    "401": {
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
-      "statusCode": 302
-    },
-    "403": {
-      "rewrite": "/403"
-    },
-    "404": {
-      "rewrite": "/404"
-    }
-  }
+  ]
 }
