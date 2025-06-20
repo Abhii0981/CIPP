@@ -2,12 +2,15 @@
   "routes": [
     {
       "route": "/",
-      "allowedUsers": [ "sohail_admin@nerdtech.net" ],
+      "allowedUsers": [ "sohail_admin@nerdtech.net" ]
+    },
+    {
+      "route": "/admin",
       "allowedRoles": [ "admin" ]
     },
     {
       "route": "*",
-      "allowedRoles": [ "admin", "authenticated" ]
+      "allowedRoles": [ "authenticated" ]
     }
   ],
   "navigationFallback": {
@@ -26,4 +29,3 @@
     }
   }
 }
- 
